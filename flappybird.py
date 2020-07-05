@@ -33,3 +33,24 @@ if __name__ == '__main__':   #main function to start
         pygame.image.load('gallery/sprites/9.png').convert_alpha(),
     )
 
+    # GAME_SPRITES['message'] = pygame.image.load('gallery/sprites/message.png').convert_alpha()
+    GAME_SPRITES['base'] = pygame.image.load('gallery/sprites/base.png').convert_alpha()
+    GAME_SPRITES['pipe'] = (
+        pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(), 180),
+        pygame.image.load(PIPE).convert_alpha(),
+    )
+    # GAME SOUND
+    GAME_SOUND['die'] = pygame.mixer.Sound('gallery/audio/die.wav')
+    GAME_SOUND['hit'] = pygame.mixer.Sound('gallery/audio/hit.wav')
+    GAME_SOUND['point'] = pygame.mixer.Sound('gallery/audio/point.wav')
+    GAME_SOUND['swoosh'] = pygame.mixer.Sound('gallery/audio/swoosh.wav')
+    GAME_SOUND['wing'] = pygame.mixer.Sound('gallery/audio/wing.wav')
+
+    GAME_SPRITES['background'] = pygame.image.load(BACKGROUND).convert()
+    GAME_SPRITES['player'] = pygame.image.load(PLAYER).convert_alpha()
+
+    while True:
+        welcomeScreen()  # Show welcome screen to the user until he presses a button
+        mainGame()  # this is the main game function
+
+
