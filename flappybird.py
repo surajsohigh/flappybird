@@ -44,6 +44,21 @@ def welcomeScreen():
                 FPSCLOCK.tick(FPS)
 
 
+def getRandomPipe():
+    """
+    Generate positions of two pipes(one bottom straight and one top rotated ) for blitting on the screen
+    """
+    pipeHeight = GAME_SPRITES['pipe'][0].get_height()
+    offset = SCREENHEIGHT/3
+    y2 = offset + random.randrange(0, int(SCREENHEIGHT - GAME_SPRITES['base'].get_height()  - 1.2 *offset))
+    pipeX = SCREENWIDTH + 10
+    y1 = pipeHeight - y2 + offset
+    pipe = [
+        {'x': pipeX, 'y': -y1}, #upper Pipe
+        {'x': pipeX, 'y': y2} #lower Pipe
+    ]
+    return pipe
+
 
 
 
