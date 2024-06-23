@@ -1,4 +1,4 @@
-import random   #Forgenereting random no
+import random   #Forgenereting random no.
 import sys      #we will use sys.exit to exit the program
 import pygame   #
 from pygame.locals import *      #Basis pygame imports
