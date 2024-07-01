@@ -1,7 +1,7 @@
 import random   #Forgenereting random no.
 import sys      #we will use sys.exit to exit the program
 import pygame   #
-from pygame.locals import *      #Basis pygame imports
+from pygame.locals import *      #Basis pygame import
 
 FPS=32
 SCREENWIDTH = 289
